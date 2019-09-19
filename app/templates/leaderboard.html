@@ -6,12 +6,15 @@
   </div>
   <!-- Header Section End -->
   <!-- Table Header -->
-  <div class="row justify-content-around py-2">
+  <div class="row justify-content-around py-2 leaderboard-header">
     <div class="col-1">
       <h4>Rank</h4>
     </div>
-    <div class="col-9">
+    <div class="col-6">
       <h4>Project</h4>
+    </div>
+    <div class="col-3">
+      <h4>Domain</h4>
     </div>
     <div class="col-2"><h4>Upvotes</h4></div>
   </div>
@@ -22,12 +25,24 @@
     <div class="col-1">
       <h4 class="project-rank">{{ project.rank }}</h4>
     </div>
-    <div class="col-9">
+    <div class="col-6">
       <a href="{{ project.link }}" class="project-name">{{ project.name }}</a>
-      <h6>#{{ project.domain }}</h6>
+    </div>
+    <div class="col-3">
+      <h6 class="project-domain">#{{ project.domain }}</h6>
+      {% for tag in project.tag %}
+      <h6 class="project-tag">#{{ tag }}</h6>
+      {% endfor %}
     </div>
     <div class="col-2">
+      {% if project.upvotes < 10000 %}
       <h4 class="project-upvotes text-center">{{ project.upvotes }}</h4>
+
+      {% endif %} {% if project.upvotes > 10000 %}
+      <h4 class="project-upvotes text-center">
+        {{(project.upvotes / 1000) | round(1) }}K
+      </h4>
+      {% endif %}
     </div>
   </div>
   {% endfor %}
