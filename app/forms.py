@@ -14,7 +14,6 @@ class RegistrationForm(FlaskForm):
     lastname = StringField('Lastname', validators=[DataRequired()])
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    # dob = DateField('Date of birth', format='%m/%d/%Y')
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
@@ -23,7 +22,7 @@ class RegistrationForm(FlaskForm):
     github = StringField('GitHub')
     linkedin = StringField('LinkedIn')
     twitter = StringField('Twitter')
-    aboutme = StringField('Aboutme')
+    aboutme = TextAreaField('Aboutme')
     
     submit = SubmitField('Register')
 
