@@ -58,6 +58,7 @@ class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), nullable=False)
     summary = db.Column(db.String(256))
+    website = db.Column(db.String(128))
     description = db.Column(db.Text)
     future_scope = db.Column(db.String(32))
     short_term_goal = db.Column(db.Text)
@@ -81,7 +82,8 @@ class Project(db.Model):
 class Comment(db.Model):
     __tablename__ = 'comment'
     id = db.Column(db.Integer, primary_key=True)
-    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    text = db.Column(db.Text, nullable=False)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
