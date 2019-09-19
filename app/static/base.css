@@ -25,10 +25,10 @@ body {
   color: #ffcf00;
   padding: 0;
   margin: 0;
-  height: 40px;
-  width: 40px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  line-height: 40px;
+  line-height: 45px;
   text-align: center;
   margin: 0 auto;
 }
@@ -46,6 +46,10 @@ footer ul li {
   display: inline-block;
 }
 
+#leaderboard .leaderboard-header {
+  border-bottom: 3px solid #000;
+}
+
 #leaderboard .leaderboard-entry {
   border-bottom: 1px dashed #000;
 }
@@ -54,4 +58,25 @@ footer ul li {
   position: relative;
   min-height: 100vh;
   padding-bottom: 4rem;
+}
+
+.project-name {
+  color: inherit;
+  font-size: 1.25rem;
+}
+
+/* .project-name:hover {
+  text-shadow: #000 2px 2px;
+} */
+
+.project-domain {
+  /* border: 3px solid #000;
+  border-radius: 5%;
+  width: 50%;*/
+  /* background: #ffef00; */
+  padding-right: 0;
+}
+
+.project-tag {
+  display: inline-block;
 }
