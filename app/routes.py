@@ -27,6 +27,10 @@ def login():
 def welcome():
     return render_template('faq.html', title='FAQs')
 
+@app.route('/terms')
+def terms():
+    return render_template('terms.html', title='Terms of Service')
+
 @app.route('/leaderboard')
 def leaderboard():
     projects = [
