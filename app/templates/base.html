@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,19 +10,9 @@
     {% else %}
     <title>College Venturers</title>
     {% endif %}
-    <meta
-      name="description"
-      content="Discovering hidden entrepreneurship talent in Indian colleges"
-    />
-    <meta
-      name="keywords"
-      content="entrepreneurship,startup,college,engineering,final year project,ventures"
-    />
-    <link
-      rel="shortcut icon"
-      href="favicon.ico"
-      type="image/vnd.microsoft.icon"
-    />
+    <meta name="description" content="Discovering hidden entrepreneurship talent in Indian colleges" />
+    <meta name="keywords" content="entrepreneurship,startup,college,engineering,final year project,ventures" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 
     <link
       rel="stylesheet"
@@ -32,7 +23,7 @@
     <link rel="stylesheet" href="../static/base.css" />
   </head>
 
-  <body>
+<body>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg" id="mainNavbar">
       <a class="navbar-brand" href="/">College Venturer</a>
@@ -56,7 +47,6 @@
           <a class="nav-item nav-link" href="#">Log in</a>
           {% endif %}
         </div>
-      </div>
     </nav>
     <!-- Navbar Section End -->
     <div id="page-container">
@@ -64,15 +54,23 @@
       {% block content %}{% endblock %}
       <!-- Content End -->
 
-      <!-- Footer Section-->
-      <footer class="page-footer font-small blue mt-5">
+    <!-- Footer Section-->
+    <footer class="page-footer font-small " id="footer-text">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3 h-100">
-          © 2019:
-          <a href="#"> CollegeVenturers</a>
+        <div class="footer-copyright text-center py-3">
+            <ul class="row justify-content-around">
+              <div class="col">© 2019 College Venturer</div>
+              <div class="col">About us</div>
+              <div class="col">Twitter</div>
+              <div class="col">FAQ</div>
+              <div class="col">Terms</div>                                
+            </ul>
+    
         </div>
+
         <!-- Copyright -->
-      </footer>
-    </div>
-  </body>
+    </footer>
+  </div>>
+</body>
+
 </html>

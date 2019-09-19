@@ -37,7 +37,11 @@ footer {
   width: 100%;
   background: #212121;
   color: #ffcf00;
-  height: 3rem;
+  /* height: 3rem; */
+}
+
+footer ul li {
+  display: inline-block;
 }
 
 /* #leaderboard .leaderboard-entry {
