@@ -1,39 +1,31 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container" id="project">
-    <div id="row project_profile">
-        <!--project.id-->
-        <!--project.name-->
-        <!--project.rank()-->
-        <!--project.summary-->
-        <!--project.description-->
-        <!--project.future_scope-->
-        <!--project.short_term_goal-->
-        <!--project.category_primary-->
-        <!--project.category_secondary-->
-        <!--project.category_tertiary-->
-        <h3>{{project.name}}</h3>
-        <div class="col-3">
-            <p>Ranked #{{project.rank}}</p>
-        </div>
-        
-        
-        <ul>
-            <li>Project id: {{project.id}}</li>
-            <li>Project Name: {{project.name}}</li>
-            <li>Project Rank: 3</li>
-            <li>Project Summary: {{project.summary}}</li>
-            <li>Project Description: {{project.description}}</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+  <div id="row project_profile">
+    <!--project.id-->
+    <!--project.name-->
+    <!--project.rank()-->
+    <!--project.summary-->
+    <!--project.description-->
+    <!--project.future_scope-->
+    <!--project.short_term_goal-->
+    <!--project.category_primary-->
+    <!--project.category_secondary-->
+    <!--project.category_tertiary-->
+    <h3>{{ project.name }}</h3>
+    <div class="col-3">
+      <p>Ranked #{{ project.rank }}</p>
     </div>
-    <div id="comments">
-        <!--comments go here: to be implemented-->
-    </div>
+
+    <ul>
+      <li>Project id: {{ project.id }}</li>
+      <li>Project Name: {{ project.name }}</li>
+      <!-- <li>Project Rank: 3</li> -->
+      <li>Project Summary: {{ project.summary }}</li>
+      <li>Project Description: {{ project.description }}</li>
+    </ul>
+  </div>
+  <div id="comments">
+    {%include '_comment.html'%}
+  </div>
 </div>
 {% endblock %}
