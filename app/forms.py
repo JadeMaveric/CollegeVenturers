@@ -1,7 +1,7 @@
+from app.models import User
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField, SelectField
-from wtforms.fields.html5 import DateField
-from wtforms.validators import DataRequired, Email, EqualTo
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, DateField, TextAreaField, SelectField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -52,4 +52,8 @@ class ProjectForm(FlaskForm):
     category_primary   = StringField('Main Category', validators=[DataRequired()])
     category_secondary = StringField('Secondary Category', validators=[DataRequired()])
     category_tertiary  = StringField('Tertiary Catgeory', validators=[DataRequired()])
-    submit = SubmitField('Save')
+    submit = SubmitField('Submit')
+
+class CommentForm(FlaskForm):
+    text = TextAreaField('Comment Text', validators=[DataRequired()])
+    submit = SubmitField('Post')
