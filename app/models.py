@@ -4,6 +4,10 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from datetime import datetime
 
+@login.user_loader
+def load_user(id):
+    return User.query.get(int(id))
+
 project_contributors = db.Table('project_contributors', db.Model.metadata,
     db.Column('project', db.Integer, db.ForeignKey('project.id')),
     db.Column('contributors', db.Integer, db.ForeignKey('user.id')),
@@ -20,7 +24,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True, nullable=False)
     email = db.Column(db.String(128), index=True, unique=True, nullable=False)
-    password_hash = db.Column(db.String(128), nullable=False)
+    password_hash = db.Column(db.String(128))
     # Profile details
     first_name = db.Column(db.String(32))
     last_name = db.Column(db.String(32))
