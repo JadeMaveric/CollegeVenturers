@@ -11,9 +11,15 @@ class LoginForm(FlaskForm):
 class ProjectForm(FlaskForm):
     projectDescriptionOneLine = TextAreaField('Description', validators=[DataRequired()])
     projectDescription = TextAreaField('Description', validators=[DataRequired()])
-    projectSite = StringField('Website', validators=[DataRequired()])
-    projectWishes = SelectField('ProjectWishes', validators=[DataRequired()])
+    
+    
     projectWishes = SelectField('ProjectWishes', choices = [('company', 'A company'), 
       ('NGO', 'A non-profit'), ('research', 'Important research'), 
-      ('NGO', 'A non-profit')])
+      ('art', 'Iconic art work'), """JULIUS Add other option""""])
+    
+    projectPlans = StringField('Description', validators=[DataRequired()])
+    mainCategory = StringField('Category', validators=[DataRequired()])
+    otherCategory1 = StringField('Category', validators=[DataRequired()])
+    otherCategory2 = StringField('Catgeory', validators=[DataRequired()])
+
     submit = SubmitField('Save')
