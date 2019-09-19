@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -9,57 +10,33 @@
     {% else %}
     <title>College Venturers</title>
     {% endif %}
-    <meta
-      name="description"
-      content="Discovering hidden entrepreneurship talent in Indian colleges"
-    />
-    <meta
-      name="keywords"
-      content="entrepreneurship,startup,college,engineering,final year project,ventures"
-    />
-    <link
-      rel="shortcut icon"
-      href="favicon.ico"
-      type="image/vnd.microsoft.icon"
-    />
+    <meta name="description" content="Discovering hidden entrepreneurship talent in Indian colleges" />
+    <meta name="keywords" content="entrepreneurship,startup,college,engineering,final year project,ventures" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='base.css') }}"
-    />
-  </head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}" />
+</head>
 
-  <body>
+<body>
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
-      <a class="navbar-brand" href="#">College Venturer</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="/leaderboard">Leaderboard</a>
-          {% if user %}
-          <a class="nav-item nav-link" href="#">{{ user.username }}</a>
-          {% else %}
-          <a class="nav-item nav-link" href="#">Log in</a>
-          {% endif %}
+        <a class="navbar-brand" href="#">College Venturer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="/leaderboard">Leaderboard</a>
+                {% if user %}
+                <a class="nav-item nav-link" href="#">{{ user.username }}</a>
+                {% else %}
+                <a class="nav-item nav-link" href="#">Log in</a>
+                {% endif %}
+            </div>
         </div>
-      </div>
     </nav>
     <!-- Navbar Section End -->
 
@@ -68,13 +45,19 @@
     <!-- Content End -->
 
     <!-- Footer Section-->
-    <footer class="page-footer font-small blue">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 ">
-        © 2019 Copyright:
-        <a href="#"> CollegeVenture</a>
-      </div>
-      <!-- Copyright -->
+    <footer class="page-footer font-small " id="footer-text">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019
+            <a href="#">College Venturer</a>
+        </div>
+        <ul>
+            <li><a href="#"></a>About us</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms</a></li>
+        </ul>
+        <!-- Copyright -->
     </footer>
-  </body>
+</body>
+
 </html>
