@@ -4,7 +4,7 @@
     {{ comment_form.text(size=32, placeholder=" Enter your comment", class="comment-input") }}
     <br />
     {{ comment_form.submit }}
-    <!--error messages-->
+    <!-- error messages -->
     {% for error in comment_form.text.errors %}
     <span class="error">[{{ error }}]</span>
     {% endfor %}

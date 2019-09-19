@@ -188,3 +188,9 @@ footer ul li {
   font-size: 1rem;
   background: #ffcf00;
 }
+
+.tag {
+  border-radius: 6px;
+  padding: 3px;
+  background-color: rgb(43, 255, 0);
+}
