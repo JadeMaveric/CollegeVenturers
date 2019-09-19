@@ -12,7 +12,7 @@ def index():
 
 @app.route('/welcome')
 def welcome():
-    return render_template('welcome.html', title='Welcome')
+    return render_template('faq.html', title='FAQs')
 
 @app.route('/leaderboard')
 def leaderboard():
