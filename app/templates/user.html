@@ -1,22 +1,43 @@
-{% extends "base.html" %}
-
-{% block content %}
-<div class="container" id="user_profile">
-    <!--user.id-->
-    <!--user.avatar(size)-->
-    <!--user.username-->
-    <!--user.email-->
-    <!--user.password_hash-->
-    <!--user.first_name-->
-    <!--user.last_name-->
-    <!--user.college-->
-    <!--user.website-->
-    <!--user.about_me-->
-    <!--user.social_github-->
-    <!--user.social_linked-->
-    <!--user.social_twitter-->
-    <!--user.comments-->
-    <!--user.upvotes-->
-    <!--user.projects-->
+{% extends "base.html" %} {% block content %}
+<div class="container pt-3 pb-2" id="user_profile">
+  <!--user.id-->
+  <!--user.avatar(size)-->
+  <!--user.username-->
+  <!--user.email-->
+  <!--user.password_hash-->
+  <!--user.first_name-->
+  <!--user.last_name-->
+  <!--user.college-->
+  <!--user.website-->
+  <!--user.about_me-->
+  <!--user.social_github-->
+  <!--user.social_linked-->
+  <!--user.social_twitter-->
+  <!--user.comments-->
+  <!--user.upvotes-->
+  <!--user.projects-->
+  <div class="row justify-content-around">
+    <div class="col-md-4 text-center">
+      <img
+        src="{{ user.avatar(400) }}"
+        class="img-fluid"
+        alt="{{ user.username }}"
+      />
+    </div>
+    <div class="col-md-6">
+      <ul>
+        <li>FirstName: {{ user.firstname }}</li>
+        <li>LastName: {{ user.lastname }}</li>
+        <li>Username: {{ user.username }}</li>
+        <li>Email: {{ user.email }}</li>
+        <li>College: {{ user.college }}</li>
+        <li>Website: {{ user.website }}</li>
+        <li>About Me: {{ user.about_me }}</li>
+        <li>GitHub: {{ user.social_github1 }}</li>
+        <li>LinkedIn: {{ user.social_linked }}</li>
+        <li>Twitter: {{ user.social_twitter }}</li>
+      </ul>
+    </div>
+  </div>
 </div>
 {% endblock %}
