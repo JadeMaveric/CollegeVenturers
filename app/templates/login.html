@@ -1,26 +1,37 @@
-{% extends "base.html" %}
-
-{% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="post" novalidate>
+{% extends "base.html" %} {% block content %}
+<div class="container" id="login">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h2 class="text-center pt-3">Log in</h2>
+      <div class="row"></div>
+      <form action="" method="post" novalidate id="login-form">
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            <!--error messages-->
-            {% for error in form.username.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            <!--error messages-->
-            {% for error in form.password.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
-    </form>
+        <div>
+          {{ form.username(size=32, placeholder=" Username", class="login-input")
+
+
+          }}<br />
+          <!--error messages-->
+          {% for error in form.username.errors %}
+          <span class="error">[{{ error }}]</span>
+          {% endfor %}
+        </div>
+        <div>
+          {{ form.password(size=32, placeholder=" Password", class="login-input")
+
+
+          }}<br />
+          <!--error messages-->
+          {% for error in form.password.errors %}
+          <span class="error">[{{ error }}]</span>
+          {% endfor %}
+        </div>
+        <div class="row justify-content-around">
+          <span>{{ form.submit(id="login-submit") }}</span>
+          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 {% endblock %}

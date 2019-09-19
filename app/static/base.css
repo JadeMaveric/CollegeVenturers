@@ -119,3 +119,28 @@ footer ul li {
 #what-do-we-offer h4 {
   border-bottom: 3px solid #000;
 }
+
+#login-form div {
+  padding: 5px;
+}
+
+#login-form p {
+  display: inline-block;
+}
+
+#login-form #login-submit {
+  outline: none;
+  border: #212121 solid 4px;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #ffcf00;
+}
+
+/* Not working */
+#login-form .login-input {
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  border: 3px solid black;
+  border-radius: 10px;
+}
