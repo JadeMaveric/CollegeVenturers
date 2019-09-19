@@ -1,0 +1,28 @@
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  nav {
+    height: 70px;
+    background: #ffcf00;
+  }
+  
+  #mainNavbar a {
+    float: right;
+  }
+  
+  .col-md-10 h4 {
+    line-height: 40px;
+  }
+  
+  .col-md-2 p {
+    background: #ffcf00;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+  }
