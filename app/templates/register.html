@@ -1,15 +1,29 @@
 {% extends "base.html" %} {% block content %}
-<div class="container" id="login">
+<div class="container" id="register">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <h2 class="text-center pt-3">Sign up</h2>
       <div class="row"></div>
-      <form action="" method="post" novalidate id="login-form">
+      <form action="" method="post" novalidate id="register-form">
         {{ form.hidden_tag() }}
-        <!-- Firstname -->
+        <!-- Name row -->
         <div class="row">
+          <!-- Firstname -->
           <div class="col-md-6">
-            {{ form.firstname(size=32, placeholder=" Firstname", class="login-input")
+            {{ form.firstname(size=32, placeholder=" Firstname", class="register-input")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             }}<br />
@@ -20,7 +34,20 @@
           </div>
           <!-- Lastname -->
           <div class="col-md-6">
-            {{ form.lastname(size=32, placeholder=" Lastname", class="login-input")
+            {{ form.lastname(size=32, placeholder=" Lastname", class="register-input")
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             }}<br />
@@ -30,10 +57,32 @@
             {% endfor %}
           </div>
         </div>
-        <!-- Password -->
+        <!-- Email & Username Row-->
         <div class="row">
+          <!-- Username -->
           <div class="col-md-6">
-            {{ form.password(size=32, placeholder=" Password", class="login-input")
+            {{ form.username(size=32, placeholder=" Username",class="register-input")
+            }}
+            {% for error in form.username.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Email -->
+          <div class="col-md-6">
+            {{ form.email(size=32, placeholder=" Email",class="register-input")
+            }}
+            {% for error in form.email.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Password Row -->
+        <div class="row">
+          <!-- Password -->
+          <div class="col-md-6">
+            {{ form.password(size=32, placeholder=" Password", class="register-input")
+
+
 
 
             }}<br />
@@ -44,7 +93,11 @@
           </div>
           <!-- Password 2 -->
           <div class="col-md-6">
-            {{ form.password2(size=32, placeholder=" Confirm Password", class="login-input")
+            {{ form.password2(size=32, placeholder=" Confirm Password", class="register-input")
+
+
+
+
 
             }}<br />
             <!--error messages-->
@@ -52,26 +105,105 @@
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
-          <!-- DOB -->
-          <div class="row">
-            <div class="col-md-6">
-              {{ form.dob(class="")
-              }}
+        </div>
+        <!-- College & About Me Row -->
+        <div class="row">
+          <!-- College -->
+          <div class="col-md-6">
+            {{ form.college(size=32, placeholder=" College", class="register-input")
 
-              {% for error in form.firstname.errors %}
-              <span class="error">[{{ error }}]</span>
-              {% endfor %}
-            </div>
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.college.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- About Me -->
+          <div class="col-md-6">
+            {{ form.aboutme(size=32, placeholder=" About Me", class="register-input")
+
+
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.aboutme.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Website & LinkedIn Row -->
+        <div class="row">
+          <!-- College -->
+          <div class="col-md-6">
+            {{ form.website(size=32, placeholder=" Website", class="register-input")
+
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.website.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- LinkedIn -->
+          <div class="col-md-6">
+            {{ form.linkedin(size=32, placeholder=" LinkedIn", class="register-input")
+
+
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.linkedin.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- GitHub & Twitter Row -->
+        <div class="row">
+          <!-- GitHub -->
+          <div class="col-md-6">
+            {{ form.github(size=32, placeholder=" GitHub", class="register-input")
+  
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.github.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Twitter -->
+          <div class="col-md-6">
+            {{ form.twitter(size=32, placeholder=" Twitter", class="register-input")
+  
+  
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.twitter.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
           </div>
         </div>
         <!-- Button -->
         <div class="row justify-content-around">
-          <span>{{ form.submit(id="login-submit") }}</span>
+          <span>{{ form.submit(id="register-submit") }}</span>
         </div>
       </form>
 
       <hr />
-      <div class="row justify-content-around" id="no-register">
+      <div class="row justify-content-around" class="no-auth">
         <p style="display: inline">Already have an account yet?</p>
         <a href="/login">Log in</a>
       </div>
