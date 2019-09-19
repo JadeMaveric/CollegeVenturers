@@ -120,15 +120,18 @@ footer ul li {
   border-bottom: 3px solid #000;
 }
 
-#login-form div {
+#login-form div,
+#register-form div {
   padding: 5px;
 }
 
-#login-form p {
+#login-form p,
+#register-form p {
   display: inline-block;
 }
 
-#login-form #login-submit {
+#login-form #login-submit,
+#register-form #register-submit {
   outline: none;
   border: #212121 solid 4px;
   border-radius: 10px;
@@ -137,7 +140,8 @@ footer ul li {
 }
 
 /* Not working */
-#login-form .login-input {
+#login-form .login-input,
+#register-form .register-input {
   padding-left: 10px;
   outline: none;
   border: none;
@@ -171,4 +175,12 @@ footer ul li {
 
 #user_profile li:nth-child(2n) {
   background: #ffdd00;
+}
+
+#login .no-auth a {
+  outline: none;
+  border: #212121 solid 4px;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #ffcf00;
 }
