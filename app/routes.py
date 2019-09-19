@@ -4,14 +4,10 @@ from app import app
 from app.forms import LoginForm
 from app.models import User
 
-user = {
-    'username': 'Shawn'
-}
-
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('welcome.html', title='Home', user=user)
+    return render_template('welcome.html', title='Home')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
