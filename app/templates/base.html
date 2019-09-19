@@ -48,11 +48,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="/leaderboard">Leaderboard</a>
-        {% if user %}
-        <a class="nav-item nav-link" href="#">{{ user.username }}</a>
+        <a class="nav-item nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        {% if current_user.is_anonymous %}
+        <a class="nav-item nav-link" href="{{ url_for('login') }}">Log in</a>
         {% else %}
-        <a class="nav-item nav-link" href="/login">Log in</a>
+        <a class="nav-item nav-link" href="{{ url_for('logout') }}">Log out</a>
         {% endif %}
       </div>
   </nav>
@@ -105,7 +105,7 @@
         <ul class="row justify-content-around px-0 mx-0">
           <div class="col-md-2">© 2019 College Venturers</div>
           <div class="col-md-2">About us</div>
-          <div class="col-md-2">Twitter</div>
+          <div class="col-md-2"><a href="https://twitter.com/CVenturers">Twitter</a></div>
           <div class="col-md-2"><a href="/faq">FAQ</a></div>
           <div class="col-md-2"><a href="/terms">Terms</a></div>
         </ul>
