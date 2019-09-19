@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
     <title>College Venturers</title>
     <meta name="description" content="Discovering hidden entrepreneurship talent in Indian colleges">
     <meta name="keywords" content="entrepreneurship,startup,college,engineering,final year project,ventures">
@@ -35,6 +37,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="#">Leaderboard</a>
+            {% if user %}
+            <a class="nav-item nav-link" href="#">{{user.username}}</a>
+            {% else %}
             <a class="nav-item nav-link" href="#">Log in</a>
           </div>
         </div>
