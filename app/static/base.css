@@ -80,3 +80,7 @@ footer ul li {
 .project-tag {
   display: inline-block;
 }
+
+.error {
+  color: #FF0000;
+}
