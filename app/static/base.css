@@ -29,5 +29,11 @@ body {
   }
 
   footer{
-    background: #ffcf00;
+    background: #172A3B;
+    color: #A0AAB3;
+  }
+
+  #footer-text {
+
+    color: rgb(219, 219, 219) !important;
   }
