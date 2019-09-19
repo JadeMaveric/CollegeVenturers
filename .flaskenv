@@ -1,1 +1,2 @@
 FLASK_APP=collegeventure.py
+FLASK_DEBUG=1
