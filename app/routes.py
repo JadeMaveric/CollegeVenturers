@@ -10,7 +10,7 @@ user = {
 def index():
     return render_template('index.html', title='Home', user=user)
 
-@app.route('/welcome')
+@app.route('/faq')
 def welcome():
     return render_template('faq.html', title='FAQs')
 
