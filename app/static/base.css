@@ -60,10 +60,6 @@ footer ul li {
   padding-bottom: 4rem;
 }
 
-<<<<<<< HEAD
-.error {
-  color: #FF0000;
-=======
 .project-name {
   color: inherit;
   font-size: 1.25rem;
@@ -83,5 +79,8 @@ footer ul li {
 
 .project-tag {
   display: inline-block;
->>>>>>> 51ed7f6f1384952b1aa7f9335c418555bd68cdbe
+}
+
+.error {
+  color: #FF0000;
 }
