@@ -55,3 +55,7 @@ footer ul li {
   min-height: 100vh;
   padding-bottom: 4rem;
 }
+
+.error {
+  color: #FF0000;
+}
