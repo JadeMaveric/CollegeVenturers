@@ -54,6 +54,15 @@ def user(username):
 def welcome():
     return render_template('faq.html', title='FAQs')
 
+@app.route('/project')
+def project():
+    project = {
+        'name': "water pollution",
+        'summary': "reducing water pollution with special chemical",
+        'description': "lorem ipsum bruh it's lit yo"
+    }
+    return render_template('project.html', title=project['name'], project=project )
+
 @app.route('/terms')
 def terms():
     return render_template('terms.html', title='Terms of Service')
