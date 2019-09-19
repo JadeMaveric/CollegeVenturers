@@ -13,7 +13,7 @@ class RegistrationForm(FlaskForm):
     lastname = StringField('Lastname', validators=[DataRequired()])
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    dob = DateField('Start Date', format='%m/%d/%Y')
+    dob = DateField('Date of birth', format='%Y-%m-%d')
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
