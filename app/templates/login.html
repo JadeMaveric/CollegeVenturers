@@ -9,6 +9,8 @@
         <div>
           {{ form.username(size=32, placeholder=" Username", class="login-input")
 
+
+
           }}<br />
           <!--error messages-->
           {% for error in form.username.errors %}
@@ -17,8 +19,6 @@
         </div>
         <div>
           {{ form.password(size=32, placeholder=" Password", class="login-input")
-
-
 
 
 
@@ -35,7 +35,7 @@
       </form>
 
       <hr />
-      <div class="row justify-content-around" id="no-register">
+      <div class="row justify-content-around" class="no-auth">
         <p style="display: inline">Don't have an account yet?</p>
         <a href="/register">Sign up</a>
       </div>

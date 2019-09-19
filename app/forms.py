@@ -14,10 +14,16 @@ class RegistrationForm(FlaskForm):
     lastname = StringField('Lastname', validators=[DataRequired()])
     username = StringField('Username', validators=[DataRequired()])
     email = StringField('Email', validators=[DataRequired(), Email()])
-    dob = DateField('Date of birth', format='%Y-%m-%d')
     password = PasswordField('Password', validators=[DataRequired()])
     password2 = PasswordField(
         'Repeat Password', validators=[DataRequired(), EqualTo('password')])
+    college = StringField('College')
+    website = StringField('Website')
+    github = StringField('GitHub')
+    linkedin = StringField('LinkedIn')
+    twitter = StringField('Twitter')
+    aboutme = TextAreaField('Aboutme')
+    
     submit = SubmitField('Register')
 
     def validate_username(self, username):

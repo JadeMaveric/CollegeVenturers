@@ -3,3 +3,4 @@ venv_shawn/*
 *__pycache__/*
 *.pyc
 app.db
+migrations/*
