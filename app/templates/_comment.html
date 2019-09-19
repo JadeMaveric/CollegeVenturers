@@ -1,0 +1,23 @@
+<!-- One comment-->
+<div id="comments_section">
+    <div id="submit_comment">
+            {{ comment_form.text(size=32, placeholder=" Enter your comment...", class="comment-input") }}
+            <br/>
+            {{ comment_form.submit }}
+        <!--error messages-->
+        {% for error in form.firstname.errors %}
+        <span class="error">[{{ error }}]</span>
+        {% endfor %}
+    </div>
+    {% for comment in comments %}
+    <table id="comments">
+        <tr valign="top">
+            <td><img src="{{ comment.author.avatar(36) }}"></td>
+            <td>
+                <b>{{ comment.author.username }}</b>
+                <br>{{ comment.text }}
+            </td>
+        </tr>
+    </table>
+    {% endfor %}
+</div>
