@@ -24,7 +24,7 @@ def leaderboard():
             'rank': 2,
             'name': "Ambulance Problem",
             'link': "/project/230123",
-            'domain': "Healthcare",
+            'domain': "Healthcar3e",
             'upvotes': 0
         }
     ]
