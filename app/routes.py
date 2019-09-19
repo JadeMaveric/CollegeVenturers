@@ -57,9 +57,15 @@ def welcome():
 @app.route('/project')
 def project():
     project = {
-        'name': "water pollution",
-        'summary': "reducing water pollution with special chemical",
-        'description': "lorem ipsum bruh it's lit yo"
+        'rank': '3',
+        'name': "WhatsAppr",
+        'future_scope': "a company",
+        'category_primary': "Marketing",
+        'category_secondary': "Messaging",
+        'category_tertiary': "Social Media",
+        'summary': "Generate WhatsApp message URLs & send bulk messages easily",
+        'description': "WhatsAppr is a PWA with a simple interface to type WhatsApp messages easily and send them to multiple people and to generate WhatsApp message URLs that you can share on social media etc. e.g. a banner you can embed into your site.",
+        'website': "https://whatsappr.com/"
     }
     return render_template('project.html', title=project['name'], project=project )
 

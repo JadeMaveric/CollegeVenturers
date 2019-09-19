@@ -172,3 +172,10 @@ footer ul li {
 #user_profile li:nth-child(2n) {
   background: #ffdd00;
 }
+
+.tag
+{
+  border-radius: 6px;
+  padding: 3px;
+  background-color: rgb(43, 255, 0);
+}
