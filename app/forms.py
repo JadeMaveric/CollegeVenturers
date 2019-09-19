@@ -15,7 +15,7 @@ class ProjectForm(FlaskForm):
     
     projectWishes = SelectField('ProjectWishes', choices = [('company', 'A company'), 
       ('NGO', 'A non-profit'), ('research', 'Important research'), 
-      ('art', 'Iconic art work'), """JULIUS Add other option""""])
+      ('art', 'Iconic art work'), """JULIUS Add other option"""])
     
     projectPlans = StringField('Description', validators=[DataRequired()])
     mainCategory = StringField('Category', validators=[DataRequired()])
