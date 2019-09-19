@@ -1,0 +1,18 @@
+2019-09-19T13:53:37 Created temporary directory: /tmp/pip-ephem-wheel-cache-9lvyk6a5
+2019-09-19T13:53:37 Created temporary directory: /tmp/pip-req-tracker-submlszs
+2019-09-19T13:53:37 Created requirements tracker '/tmp/pip-req-tracker-submlszs'
+2019-09-19T13:53:37 Created temporary directory: /tmp/pip-install-wojm05b5
+2019-09-19T13:53:37 Cleaning up...
+2019-09-19T13:53:37 Removed build tracker '/tmp/pip-req-tracker-submlszs'
+2019-09-19T13:53:37 ERROR: You must give at least one requirement to install (see "pip help install")
+2019-09-19T13:53:37 Exception information:
+2019-09-19T13:53:37 Traceback (most recent call last):
+2019-09-19T13:53:37   File "/home/vipul/Codes/SchruteCommunications/venv/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 179, in main
+2019-09-19T13:53:37     status = self.run(options, args)
+2019-09-19T13:53:37   File "/home/vipul/Codes/SchruteCommunications/venv/lib/python3.7/site-packages/pip/_internal/commands/install.py", line 289, in run
+2019-09-19T13:53:37     self.name, wheel_cache
+2019-09-19T13:53:37   File "/home/vipul/Codes/SchruteCommunications/venv/lib/python3.7/site-packages/pip/_internal/cli/base_command.py", line 306, in populate_requirement_set
+2019-09-19T13:53:37     '(see "pip help %(name)s")' % opts)
+2019-09-19T13:53:37 pip._internal.exceptions.CommandError: You must give at least one requirement to install (see "pip help install")
+2019-09-19T13:53:37 You are using pip version 19.0.3, however version 19.2.3 is available.
+2019-09-19T13:53:37 You should consider upgrading via the 'pip install --upgrade pip' command.
