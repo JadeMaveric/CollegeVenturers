@@ -81,6 +81,10 @@ footer ul li {
   display: inline-block;
 }
 
+.error {
+  color: #FF0000;
+}
+
 .question {
   font-weight: 700;
 }
