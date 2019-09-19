@@ -4,13 +4,15 @@ body {
   background: #ffcf00;
 }
 
-nav {
+#mainNavbar {
   height: 70px;
-  background: #ffcf00;
+  background: #212121;
+  border-bottom: 5px solid black;
 }
 
 #mainNavbar a {
   float: right;
+  color: #ffcf00;
 }
 
 .col-md-10 h4 {
@@ -18,7 +20,8 @@ nav {
 }
 
 .col-md-2 p {
-  background: #ffcf00;
+  background: #000;
+  color: #ffcf00;
   padding: 0;
   margin: 0;
   height: 40px;
@@ -29,5 +32,19 @@ nav {
 }
 
 footer {
-  background: #ffcf00;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #212121;
+  color: #ffcf00;
+  height: 3rem;
+}
+
+/* #leaderboard .leaderboard-entry {
+  border-bottom: 5px dashed #000;
+} */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 4rem;
 }

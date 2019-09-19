@@ -29,16 +29,13 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='base.css') }}"
-    />
+    <link rel="stylesheet" href="../static/base.css" />
   </head>
 
   <body>
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNavbar">
-      <a class="navbar-brand" href="#">College Venturer</a>
+    <nav class="navbar navbar-expand-lg" id="mainNavbar">
+      <a class="navbar-brand" href="/">College Venturer</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -62,19 +59,20 @@
       </div>
     </nav>
     <!-- Navbar Section End -->
+    <div id="page-container">
+      <!-- Content Start -->
+      {% block content %}{% endblock %}
+      <!-- Content End -->
 
-    <!-- Content Start -->
-    {% block content %}{% endblock %}
-    <!-- Content End -->
-
-    <!-- Footer Section-->
-    <footer class="page-footer font-small blue">
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3 ">
-        © 2019 Copyright:
-        <a href="#"> CollegeVenture</a>
-      </div>
-      <!-- Copyright -->
-    </footer>
+      <!-- Footer Section-->
+      <footer class="page-footer font-small blue mt-5">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 h-100">
+          © 2019:
+          <a href="#"> CollegeVenturers</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+    </div>
   </body>
 </html>

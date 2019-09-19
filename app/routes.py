@@ -18,7 +18,7 @@ def leaderboard():
             'name': "Startup Communication",
             'link': "/project/123123", #123123 is the project id
             'domain': "Communication",
-            'upvotes': 0
+            'upvotes': 128
         }, 
         {
             'rank': 2,
