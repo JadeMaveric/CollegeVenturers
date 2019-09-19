@@ -1,4 +1,6 @@
+html,
 body {
+  height: 100%;
   font-size: 16px;
   box-sizing: border-box;
   background: #ffcf00;
@@ -82,18 +84,34 @@ footer ul li {
 }
 
 .error {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .question {
   font-weight: 700;
 }
 
-.FAQ
-{
+.FAQ {
   border-top: 1px dashed #000;
 }
-.blocks
-{
+.blocks {
   margin-top: 30px;
+}
+
+#welcome {
+  background-image: url("../static/welcome-img.jpg");
+  height: 95vh;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#intro {
+  padding-top: 50vh;
+  color: #fff;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.8), 0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.2);
+  font-size: 2rem;
+  text-transform: uppercase;
 }
