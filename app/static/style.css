@@ -1,12 +1,12 @@
 body {
   font-size: 16px;
   box-sizing: border-box;
-  background: #ffcf00;
 }
 
 nav {
   height: 70px;
   background: #ffcf00;
+  /* border-bottom: #0069ff 3px solid; */
 }
 
 #mainNavbar a {
@@ -26,13 +26,4 @@ nav {
   border-radius: 50%;
   line-height: 40px;
   text-align: center;
-}
-
-footer{
-  background: #172A3B;
-  color: #A0AAB3;
-}
-
-#footer-text {
-  color: rgb(219, 219, 219) !important;
 }
