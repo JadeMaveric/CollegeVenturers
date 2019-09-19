@@ -9,17 +9,18 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Sign In')
 
 class ProjectForm(FlaskForm):
-    projectDescriptionOneLine = TextAreaField('Description', validators=[DataRequired()])
-    projectDescription = TextAreaField('Description', validators=[DataRequired()])
-    
-    
-    projectWishes = SelectField('ProjectWishes', choices = [('company', 'A company'), 
-      ('NGO', 'A non-profit'), ('research', 'Important research'), 
-      ('art', 'Iconic art work'), """JULIUS Add other option"""])
-    
-    projectPlans = StringField('Description', validators=[DataRequired()])
-    mainCategory = StringField('Category', validators=[DataRequired()])
-    otherCategory1 = StringField('Category', validators=[DataRequired()])
-    otherCategory2 = StringField('Catgeory', validators=[DataRequired()])
-
+    name = StringField('Project Name', validators=[DataRequired()])
+    summary = StringField('Short Summary', validators=[DataRequired()])
+    description = TextAreaField('Description', validators=[DataRequired()])
+    future_scope = SelectField('Future Scope', choices = [
+      ('company', 'A company'), 
+      ('ngo', 'A non-profit'),
+      ('research', 'Important research'), 
+      ('art', 'Iconic art work'),
+      ('other', 'Something else')
+    ])
+    short_term_goal = TextAreaField('4 Week Plan', validators=[DataRequired()])
+    category_primary   = StringField('Main Category', validators=[DataRequired()])
+    category_secondary = StringField('Secondary Category', validators=[DataRequired()])
+    category_tertiary  = StringField('Tertiary Catgeory', validators=[DataRequired()])
     submit = SubmitField('Save')

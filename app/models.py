@@ -54,10 +54,26 @@ class User(UserMixin, db.Model):
         return f'<User {self.username}>'
 
 class Project(db.Model):
+    __tablename__ = 'project'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), nullable=False)
+    summary = db.Column(db.String(256))
+    description = db.Column(db.Text)
+    future_scope = db.Column(db.String(32))
+    short_term_goal = db.Column(db.Text)
+    category_primary = db.Column(db.String(32))
+    category_secondary = db.Column(db.String(32))
+    category_tertiary = db.Column(db.String(32))
+
     #rank = %COUNT(upvotes) WHERE PROJECT = self.id
-    __tablename__ = 'project'
+    def rank(self):
+        raise NotImplementedError
+
+    def upvote_number(self):
+        raise NotImplementedError
+
+    def upvote_user_list(self):
+        raise NotImplementedError
 
     def __repr__(self):
         return f'<Project {self.name}>'
