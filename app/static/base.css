@@ -121,17 +121,20 @@ footer ul li {
 }
 
 #login-form div,
-#register-form div {
+#register-form div,
+#create-form div {
   padding: 5px;
 }
 
 #login-form p,
-#register-form p {
+#register-form p,
+#create-form p {
   display: inline-block;
 }
 
 #login-form #login-submit,
-#register-form #register-submit {
+#register-form #register-submit,
+#create-form #create-submit {
   outline: none;
   border: #212121 solid 4px;
   border-radius: 10px;
@@ -141,7 +144,8 @@ footer ul li {
 
 /* Not working */
 #login-form .login-input,
-#register-form .register-input {
+#register-form .register-input,
+#create-form .create-input {
   padding-left: 10px;
   outline: none;
   border: none;
