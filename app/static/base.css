@@ -84,3 +84,16 @@ footer ul li {
 .error {
   color: #FF0000;
 }
+
+.question {
+  font-weight: 700;
+}
+
+.FAQ
+{
+  border-top: 1px dashed #000;
+}
+.blocks
+{
+  margin-top: 30px;
+}
