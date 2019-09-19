@@ -7,3 +7,8 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
+
+class ProjectForm(FlaskForm):
+    projectDescriptionOneLine = StringField('Description', validators=[DataRequired()])
+    projectDescription = StringField('Description', validators=[DataRequired()])
+    projectSite = StringField('Description', validators=[DataRequired()])
