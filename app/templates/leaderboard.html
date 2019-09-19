@@ -6,34 +6,34 @@
   </div>
   <!-- Header Section End -->
   <!-- Table Header -->
-  <div class="row justify-content-center py-2">
-    <div class="col-md-1">
+  <div class="row justify-content-around py-2">
+    <div class="col-1">
       <h4>Rank</h4>
     </div>
-    <div class="col-md-9">
+    <div class="col-9">
       <h4>Project</h4>
     </div>
-    <div class="col-md-2"><h4>Upvotes</h4></div>
+    <div class="col-2"><h4>Upvotes</h4></div>
   </div>
   <!-- Table Header End -->
   <!-- Leaderboard Entries -->
   {% for project in projects %}
-  <div class="row justify-content-center py-2 leaderboard-entry">
-    <div class="col-md-1">
+  <div class="row justify-content-around py-2 leaderboard-entry">
+    <div class="col-1">
       <h4 class="project-rank">{{ project.rank }}</h4>
     </div>
-    <div class="col-md-9">
+    <div class="col-9">
       <a href="{{ project.link }}" class="project-name">{{ project.name }}</a>
       <h6>#{{ project.domain }}</h6>
     </div>
-    <div class="col-md-2">
-      <h4>{{ project.upvotes }}</h4>
+    <div class="col-2">
+      <h4 class="project-upvotes text-center">{{ project.upvotes }}</h4>
     </div>
   </div>
   {% endfor %}
 
-  <div class="row">
-    <div class="col-md-3">
+  <div class="row justify-content-center pt-3">
+    <div class="col-md-3 text-center">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
       veniam? Aut distinctio odit commodi, esse eos voluptates maiores nulla ut
       facere voluptatem reprehenderit iusto odio rerum aliquam maxime

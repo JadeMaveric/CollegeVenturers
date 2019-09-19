@@ -19,7 +19,8 @@ body {
   line-height: 40px;
 }
 
-.col-md-2 p {
+.project-upvotes {
+  font-size: 1rem;
   background: #000;
   color: #ffcf00;
   padding: 0;
@@ -29,6 +30,7 @@ body {
   border-radius: 50%;
   line-height: 40px;
   text-align: center;
+  margin: 0 auto;
 }
 
 footer {
@@ -44,9 +46,10 @@ footer ul li {
   display: inline-block;
 }
 
-/* #leaderboard .leaderboard-entry {
-  border-bottom: 5px dashed #000;
-} */
+#leaderboard .leaderboard-entry {
+  border-bottom: 1px dashed #000;
+}
+
 #page-container {
   position: relative;
   min-height: 100vh;
