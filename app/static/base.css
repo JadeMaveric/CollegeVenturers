@@ -100,7 +100,7 @@ footer ul li {
 
 #welcome {
   background-image: url("../static/welcome-img.jpg");
-  height: 95vh;
+  height: 80vh;
 
   background-position: center;
   background-repeat: no-repeat;
@@ -143,4 +143,32 @@ footer ul li {
   border: none;
   border: 3px solid black;
   border-radius: 10px;
+}
+
+#user_profile img {
+  max-width: 200px;
+  border: 5px solid #000;
+  border-radius: 50%;
+}
+
+#user_profile ul {
+  border: #000 3px solid;
+  padding-left: 0;
+  padding: 5px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+#user_profile li {
+  list-style: none;
+  padding-left: 20px;
+  border-radius: 15px;
+}
+
+#user_profile li:nth-child(n) {
+  background: #ffff00;
+}
+
+#user_profile li:nth-child(2n) {
+  background: #ffdd00;
 }

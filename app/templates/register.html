@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block content %}
+<div class="container" id="login">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center pt-3">Sign up</h2>
+      <div class="row"></div>
+      <form action="" method="post" novalidate id="login-form">
+        {{ form.hidden_tag() }}
+        <!-- Firstname -->
+        <div class="row">
+          <div class="col-md-6">
+            {{ form.firstname(size=32, placeholder=" Firstname", class="login-input")
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.firstname.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Lastname -->
+          <div class="col-md-6">
+            {{ form.lastname(size=32, placeholder=" Lastname", class="login-input")
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.lastname.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Password -->
+        <div class="row">
+          <div class="col-md-6">
+            {{ form.password(size=32, placeholder=" Password", class="login-input")
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.password.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Password 2 -->
+          <div class="col-md-6">
+            {{ form.password2(size=32, placeholder=" Confirm Password", class="login-input")
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.password2.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- DOB -->
+          <div class="row">
+            <div class="col-md-6">
+              {{ form.dob(class="")
+              }}
+
+              {% for error in form.firstname.errors %}
+              <span class="error">[{{ error }}]</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="row justify-content-around">
+          <span>{{ form.submit(id="login-submit") }}</span>
+        </div>
+      </form>
+
+      <hr />
+      <div class="row justify-content-around" id="no-register">
+        <p style="display: inline">Already have an account yet?</p>
+        <a href="/login">Log in</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
