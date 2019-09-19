@@ -10,6 +10,8 @@
           {{ form.username(size=32, placeholder=" Username", class="login-input")
 
 
+
+
           }}<br />
           <!--error messages-->
           {% for error in form.username.errors %}
@@ -18,6 +20,8 @@
         </div>
         <div>
           {{ form.password(size=32, placeholder=" Password", class="login-input")
+
+
 
 
           }}<br />
@@ -31,6 +35,12 @@
           <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
         </div>
       </form>
+
+      <hr />
+      <div class="row justify-content-around" id="no-register">
+        <p style="display: inline">Don't have an account yet?</p>
+        <a href="/register">Sign up</a>
+      </div>
     </div>
   </div>
 </div>
