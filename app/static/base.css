@@ -115,3 +115,7 @@ footer ul li {
   font-size: 2rem;
   text-transform: uppercase;
 }
+
+#what-do-we-offer h4 {
+  border-bottom: 3px solid #000;
+}
