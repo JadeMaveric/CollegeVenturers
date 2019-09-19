@@ -10,6 +10,10 @@ user = {
 def index():
     return render_template('index.html', title='Home', user=user)
 
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html', title='Welcome')
+
 @app.route('/leaderboard')
 def leaderboard():
     projects = [
