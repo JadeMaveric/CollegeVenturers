@@ -91,7 +91,7 @@ footer ul li {
   font-weight: 700;
 }
 
-.FAQ {
+.FAQ{
   border-top: 1px dashed #000;
 }
 .blocks {
@@ -132,7 +132,7 @@ footer ul li {
   display: inline-block;
 }
 
-#login-form #login-submit,
+.upvote, #login-form #login-submit,
 #register-form #register-submit,
 #create-form #create-submit,
 #submit_comment .comment-submit {
@@ -195,4 +195,16 @@ footer ul li {
   border-radius: 6px;
   padding: 3px;
   background-color: rgb(43, 255, 0);
+}
+
+textarea
+{
+  padding: 5px;
+  width: 90%;
+}
+
+.comment-post {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  border-bottom: 1px dashed #000;
 }
