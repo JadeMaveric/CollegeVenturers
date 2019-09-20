@@ -1,4 +1,4 @@
-## Schrute Communications
+## College Venturers
 
 Project for Inspirathon, the Hackathon at Inspirus 2019.
 
@@ -16,3 +16,5 @@ Technology Stack:
 
 - Back-end:
   - Flask
+  
+  
