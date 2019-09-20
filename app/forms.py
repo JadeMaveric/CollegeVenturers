@@ -37,20 +37,20 @@ class RegistrationForm(FlaskForm):
             raise ValidationError('Please use a different email address.')
         
 class ProjectForm(FlaskForm):
-    name = StringField('Project Name', validators=[DataRequired()])
-    summary = StringField('Short Summary', validators=[DataRequired()])
-    description = TextAreaField('Description', validators=[DataRequired()])
+    name = StringField('Project Name')
+    summary = StringField('Short Summary')
+    description = TextAreaField('Description')
     website = StringField('Project Website')
-    members = StringField('List of members usernames', validators=[DataRequired()])
-    future_scope = SelectField('Future Scope', choices = [
-      ('company', 'A company'), 
-      ('ngo', 'A non-profit'),
-      ('research', 'Important research'), 
-      ('art', 'Iconic art work'),
-      ('other', 'Something else')
-    ])
-    short_term_goal = TextAreaField('4 Week Plan', validators=[DataRequired()])
-    category_primary   = StringField('Main Category', validators=[DataRequired()])
+    members = StringField('List of members usernames')
+    # future_scope = SelectField('Future Scope', choices = [
+    #   ('company', 'A company'), 
+    #   ('ngo', 'A non-profit'),
+    #   ('research', 'Important research'), 
+    #   ('art', 'Iconic art work'),
+    #   ('other', 'Something else')
+    # ])
+    short_term_goal = TextAreaField('4 Week Plan')
+    category_primary   = StringField('Main Category')
     category_secondary = StringField('Secondary Category')
     category_tertiary  = StringField('Tertiary Catgeory')
     submit = SubmitField('Submit')

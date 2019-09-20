@@ -83,7 +83,7 @@ def create_project():
             summary = form.summary.data,
             website = form.website.data,
             description = form.description.data,
-            future_scope = form.future_scope.data,
+            #future_scope = form.future_scope.data,
             short_term_goal = form.short_term_goal.data,
             category_primary = form.category_primary.data,
             category_secondary = form.category_secondary.data,
@@ -91,27 +91,28 @@ def create_project():
         )
         usernames = tuple([name.strip() for name in form.members.data.split(',')])
         usernames = User.query.filter(User.username.in_(usernames)).all()
-        new_project.contributors.append(usernames)
+        new_project.contributors.extend(usernames)
         db.session.add(new_project)
         db.session.commit()
         flash("Successfully created a project")
-        return redirect( url_for(project, new_project.id) )
+        return redirect( url_for('leaderboard') )
     return render_template('create_project.html', title='Create Project', form=form)
 
 @app.route('/project/<project_id>')
 def project(project_id):
     comment_form = CommentForm()
-    project = {
-        'rank': '3',
-        'name': "WhatsAppr",
-        'future_scope': "a company",
-        'category_primary': "Marketing",
-        'category_secondary': "Messaging",
-        'category_tertiary': "Social Media",
-        'summary': "Generate WhatsApp message URLs & send bulk messages easily",
-        'description': "WhatsAppr is a PWA with a simple interface to type WhatsApp messages easily and send them to multiple people and to generate WhatsApp message URLs that you can share on social media etc. e.g. a banner you can embed into your site.",
-        'website': "https://whatsappr.com/"
-    }
+    project = Project.query.filter_by(id=project_id).first_or_404()
+    # project = {
+    #     'rank': '3',
+    #     'name': "WhatsAppr",
+    #     'future_scope': "a company",
+    #     'category_primary': "Marketing",
+    #     'category_secondary': "Messaging",
+    #     'category_tertiary': "Social Media",
+    #     'summary': "Generate WhatsApp message URLs & send bulk messages easily",
+    #     'description': "WhatsAppr is a PWA with a simple interface to type WhatsApp messages easily and send them to multiple people and to generate WhatsApp message URLs that you can share on social media etc. e.g. a banner you can embed into your site.",
+    #     'website': "https://whatsappr.com/"
+    # }
     comments = [
         {
             'id': 1,
@@ -132,7 +133,7 @@ def project(project_id):
             'author': User.query.get(1)
         }
     ]
-    return render_template('project.html', title=project['name'], project=project, comment_form=comment_form, comments=comments )
+    return render_template('project.html', title=project.name, project=project, comment_form=comment_form, comments=comments )
 
 @app.route('/terms')
 def terms():
