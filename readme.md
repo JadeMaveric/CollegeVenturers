@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## College Venturers
 Gamification and Discovery to boost college projects!
 College projects are an untapped resource! Do you have a startup/business idea? Are you a student working on something that could be a startup someday? Submit it on College Venturers and get discovered!
