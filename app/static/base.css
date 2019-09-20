@@ -4,6 +4,9 @@ body {
   font-size: 16px;
   box-sizing: border-box;
   background: #ffcf00;
+  margin: 0 auto;
+  min-width: 400px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #mainNavbar {
@@ -15,6 +18,11 @@ body {
 #mainNavbar a {
   float: right;
   color: #ffcf00;
+}
+
+#mainNavbar a:hover {
+  color: #fff;
+  transition: all 0.3s ease-in;
 }
 
 .col-md-10 h4 {
@@ -50,6 +58,7 @@ footer ul li {
 
 #leaderboard .leaderboard-header {
   border-bottom: 3px solid #000;
+  text-align: center;
 }
 
 #leaderboard .leaderboard-entry {
@@ -85,13 +94,14 @@ footer ul li {
 
 .error {
   color: #ff0000;
+  transition: 0.4s all ease-inl;
 }
 
 .question {
   font-weight: 700;
 }
 
-.FAQ{
+.FAQ {
   border-top: 1px dashed #000;
 }
 .blocks {
@@ -120,6 +130,10 @@ footer ul li {
   border-bottom: 3px solid #000;
 }
 
+#what-do-we-offer h5 {
+  font-weight: 600;
+}
+
 #login-form div,
 #register-form div,
 #create-form div {
@@ -132,7 +146,8 @@ footer ul li {
   display: inline-block;
 }
 
-.upvote, #login-form #login-submit,
+.upvote,
+#login-form #login-submit,
 #register-form #register-submit,
 #create-form #create-submit,
 #submit_comment .comment-submit {
@@ -153,6 +168,17 @@ footer ul li {
   border: none;
   border: 3px solid black;
   border-radius: 10px;
+}
+
+#register h2,
+#login h2 {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#login-form .login-input,
+#register .register-input {
+  width: 100%;
 }
 
 #user_profile img {
@@ -197,8 +223,7 @@ footer ul li {
   background-color: rgb(43, 255, 0);
 }
 
-textarea
-{
+textarea {
   padding: 5px;
   width: 90%;
 }
@@ -207,4 +232,12 @@ textarea
   padding-top: 60px;
   padding-bottom: 70px;
   border-bottom: 1px dashed #000;
+}
+
+#quote {
+  background-color: #212121;
+  color: #ffcf00;
+  font-style: italic;
+  display: inline-block;
+  padding-right: 55px;
 }
