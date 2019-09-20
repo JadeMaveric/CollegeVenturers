@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![made-with-flask](https://img.shields.io/badge/Made%20with-Flask-lightgrey)](https://github.com/pallets/flask)
 
 ## College Venturers
 Gamification and Discovery to boost college projects!
@@ -30,7 +30,7 @@ Run ```pip install -r requirements.txt``` to install the necessary packages.
 Use ```flask shell``` to pop into an interactive python session. Useful for testing queries.  
 Visit the FAQ tab on the footer to learn more
 
-Directory Structure:  
+### Directory Structure:  
 + .flaskenv --environment variable required to run the project.  
 + collegeventure.py --main file that is run.  
 + config.py --configurations for various objects used throughout the project.  
