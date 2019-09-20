@@ -74,6 +74,8 @@ def welcome():
 
 from datetime import datetime
 
+@app.route('/project/create')
+
 @app.route('/project/<project_id>')
 def project(project_id):
     comment_form = CommentForm()
