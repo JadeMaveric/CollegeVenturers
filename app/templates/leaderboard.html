@@ -16,19 +16,19 @@
   <!-- Leaderboard Entries -->
   {% for project in projects %}
   <div class="row justify-content-around py-2 leaderboard-entry">
-    <div class="col-1">
+    <div class="col-1 text-center">
       <h4 class="project-rank">{{ project.rank }}</h4>
     </div>
     <div class="col-6">
       <a href="{{ project.link }}" class="project-name">{{ project.name }}</a>
     </div>
-    <div class="col-3">
+    <div class="col-3 text-center">
       <h6 class="project-domain">#{{ project.domain }}</h6>
       {% for tag in project.tag %}
       <h6 class="project-tag">#{{ tag }}</h6>
       {% endfor %}
     </div>
-    <div class="col-2">
+    <div class="col-2 text-center">
       {% if project.upvotes < 10000 %}
       <h4 class="project-upvotes text-center">{{ project.upvotes }}</h4>
 
@@ -41,7 +41,7 @@
   </div>
   {% endfor %}
 
-  <div class="row justify-content-center pt-3">
+  <!-- <div class="row justify-content-center pt-3">
     <div class="col-md-3 text-center">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
       veniam? Aut distinctio odit commodi, esse eos voluptates maiores nulla ut
@@ -57,7 +57,7 @@
       laudantium autem, dolorem incidunt culpa distinctio enim dolore, rem
       cupiditate sapiente quos ab illum voluptatum quas?
     </div>
-  </div>
+  </div> -->
   <!-- Leaderboard Entries End -->
 </div>
 {% endblock %}
