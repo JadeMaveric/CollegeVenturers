@@ -10,8 +10,8 @@ def load_user(id):
     return User.query.get(int(id))
 
 project_contributors = db.Table('project_contributors', db.Model.metadata,
-    db.Column('project', db.Integer, db.ForeignKey('project.id')),
     db.Column('contributors', db.Integer, db.ForeignKey('user.id')),
+    db.Column('project', db.Integer, db.ForeignKey('project.id'))
 )
 
 project_upvoters = db.Table('project_upvoters', db.Model.metadata,
@@ -43,7 +43,6 @@ class User(UserMixin, db.Model):
     # Posts
     comments = db.relationship('Comment', backref='author', lazy='dynamic')
     upvotes  = db.relationship('Project', secondary=project_upvoters, backref='upvoters')
-    projects = db.relationship('Project', secondary=project_contributors, backref='contributors')
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -71,6 +70,7 @@ class Project(db.Model):
     category_secondary = db.Column(db.String(32))
     category_tertiary = db.Column(db.String(32))
     comments = db.relationship('Comment', secondary=project_comment, backref='project')
+    contributors = db.relationship('User', secondary=project_contributors, backref='projects')
 
     #rank = %COUNT(upvotes) WHERE PROJECT = self.id
     def rank(self):
