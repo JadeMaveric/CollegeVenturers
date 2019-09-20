@@ -130,6 +130,10 @@ footer ul li {
   border-bottom: 3px solid #000;
 }
 
+#what-do-we-offer h5 {
+  font-weight: 600;
+}
+
 #login-form div,
 #register-form div,
 #create-form div {
@@ -228,4 +232,12 @@ textarea {
   padding-top: 60px;
   padding-bottom: 70px;
   border-bottom: 1px dashed #000;
+}
+
+#quote {
+  background-color: #212121;
+  color: #ffcf00;
+  font-style: italic;
+  display: inline-block;
+  padding-right: 55px;
 }
