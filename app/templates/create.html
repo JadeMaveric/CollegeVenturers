@@ -8,20 +8,18 @@
         {{ form.hidden_tag() }}
         <!-- Name row -->
         <div class="row">
-          <!-- Firstname -->
+          <!-- Project Name -->
           <div class="col-md-6">
-            {{ form.firstname(size=32, placeholder=" Firstname", class="create-input")
-
-
+            {{ form.name(size=32, placeholder=" Projectname", class="create-input")
             }}<br />
             <!--error messages-->
-            {% for error in form.firstname.errors %}
+            {% for error in form.name.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
-          <!-- Lastname -->
+          <!-- Summary -->
           <div class="col-md-6">
-            {{ form.lastname(size=32, placeholder=" Lastname", class="create-input")
+            {{ form.summary(size=32, placeholder=" Project Summary", class="create-input")
 
             }}<br />
             <!--error messages-->
@@ -30,71 +28,65 @@
             {% endfor %}
           </div>
         </div>
-        <!-- Email & Username Row-->
+        <!-- Website & Future Scope Row-->
         <div class="row">
-          <!-- Username -->
+          <!-- Website -->
           <div class="col-md-6">
-            {{ form.username(size=32, placeholder=" Username",class="create-input")
+            {{ form.website(size=32, placeholder=" Website",class="create-input")
             }}
-            {% for error in form.username.errors %}
+            {% for error in form.website.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
-          <!-- Email -->
+          <!-- Future Scope -->
           <div class="col-md-6">
-            {{ form.email(size=32, placeholder=" Email",class="create-input")
+            {{ form.future_scope(size=32, placeholder=" Future Scope",class="create-input")
             }}
-            {% for error in form.email.errors %}
+            {% for error in form.future_scope.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
         </div>
-        <!-- Password Row -->
+        <!-- Description & Short Term Goal Row -->
         <div class="row">
-          <!-- Password -->
+          <!-- Description -->
           <div class="col-md-6">
-            {{ form.password(size=32, placeholder=" Password", class="create-input")
+            {{ form.description(size=32, placeholder=" Project Description", class="create-input")
 
             }}<br />
             <!--error messages-->
-            {% for error in form.password.errors %}
+            {% for error in form.description.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
-          <!-- Password 2 -->
+          <!-- Short Term Goal -->
           <div class="col-md-6">
-            {{ form.password2(size=32, placeholder=" Confirm Password", class="create-input")
-
+            {{ form.short_term_goal(size=32, placeholder=" Short Term Goal", class="create-input")
             }}<br />
             <!--error messages-->
-            {% for error in form.password2.errors %}
+            {% for error in form.short_term_goal.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
         </div>
-        <!-- College & About Me Row -->
+        <!-- Primary & Secondary Category Row -->
         <div class="row">
-          <!-- College -->
+          <!-- Primary -->
           <div class="col-md-6">
-            {{ form.college(size=32, placeholder=" College", class="create-input")
-
-
+            {{ form.category_primary(size=32, placeholder=" Primary Category", class="create-input")
 
             }}<br />
             <!--error messages-->
-            {% for error in form.college.errors %}
+            {% for error in form.category_primary.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
-          <!-- About Me -->
+          <!-- Secondary -->
           <div class="col-md-6">
-            {{ form.aboutme(size=32, placeholder=" About Me", class="create-input")
-
-
-
+            {{ form.category_secondary(size=32, placeholder=" Secondary Category", class="create-input")
             }}<br />
             <!--error messages-->
-            {% for error in form.aboutme.errors %}
+            {% for error in form.category_secondary.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
@@ -103,21 +95,17 @@
         <div class="row">
           <!-- College -->
           <div class="col-md-6">
-            {{ form.website(size=32, placeholder=" Website", class="create-input")
-
-
+            {{ form.category_tertiary(size=32, placeholder=" Tertiary Category", class="create-input")
 
             }}<br />
             <!--error messages-->
-            {% for error in form.website.errors %}
+            {% for error in form.category_tertiary.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
           <!-- LinkedIn -->
           <div class="col-md-6">
             {{ form.linkedin(size=32, placeholder=" LinkedIn", class="create-input")
-
-
 
             }}<br />
             <!--error messages-->
@@ -134,6 +122,12 @@
 
 
 
+
+
+
+
+
+
             }}<br />
             <!--error messages-->
             {% for error in form.github.errors %}
@@ -143,6 +137,12 @@
           <!-- Twitter -->
           <div class="col-md-6">
             {{ form.twitter(size=32, placeholder=" Twitter", class="create-input")
+
+
+
+
+
+
 
 
 
