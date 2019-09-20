@@ -24,7 +24,7 @@
         <h5>Description</h5>
         {{ project.description }}
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-md-1"><button class="upvote" type="submit">Upvote</button></div>
       <div class="col-md-2">
         <p class="rank">Ranked #{{ project.rank }}</p>
         <p>Check the project: {{ project.website }}</p>
@@ -35,8 +35,11 @@
   <div id="comments">
     <!--comments go here: to be implemented-->
   </div>
-</div>
+
+<br>
 <div id="comments">
+    <h4>Comments</h4>
   {%include '_comment.html'%}
 </div>
 {% endblock %}
+</div>

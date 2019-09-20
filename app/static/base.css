@@ -132,7 +132,7 @@ footer ul li {
   display: inline-block;
 }
 
-#login-form #login-submit,
+.upvote, #login-form #login-submit,
 #register-form #register-submit,
 #create-form #create-submit,
 #submit_comment .comment-submit {
@@ -195,4 +195,9 @@ footer ul li {
   border-radius: 6px;
   padding: 3px;
   background-color: rgb(43, 255, 0);
+}
+
+textarea
+{
+  width: 90%;
 }
