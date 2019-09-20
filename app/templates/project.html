@@ -1,4 +1,5 @@
 {% extends "base.html" %} {% block content %}
+<br>
 <div class="container" id="project">
   <div id="project_profile">
     <!--project.id-->
@@ -27,10 +28,19 @@
       <div class="col-md-1"><button class="upvote" type="submit">Upvote</button></div>
       <div class="col-md-2">
         <p class="rank">Ranked #{{ project.rank }}</p>
-        <p>Check the project: {{ project.website }}</p>
+        <p>Check the project: <a href="{{ project.website }}">{{ project.website }}</a></p>
         <p>This project could be {{ project.future_scope }} someday.</p>
       </div>
     </div>
+    <br>
+    <h5>Weekly updates</h5>
+    <h6>Week 3 updates</h6>
+    <p>Launched the app on Product Hunt. Was voted as Product #4 for the day. Got really good stats too!</p>
+    <h6>Week 2 updates</h6>
+    <p>Implemented a send to WhatsApp feature based on popular demand and feedback</p>
+    <h6>Week 1 updates</h6>
+    <p>Built an MVP of the app with ReactJS.</p>
+    
   </div>
   <div id="comments">
     <!--comments go here: to be implemented-->
