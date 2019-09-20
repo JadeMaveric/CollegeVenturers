@@ -108,7 +108,7 @@ def project(project_id):
             'author': User.query.get(1)
         }
     ]
-    return render_template('project.html', title=project['name'], project=project, comment_form=comment_form )
+    return render_template('project.html', title=project['name'], project=project, comment_form=comment_form, comments=comments )
 
 @app.route('/terms')
 def terms():

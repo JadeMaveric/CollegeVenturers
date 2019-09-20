@@ -46,11 +46,11 @@ class ProjectForm(FlaskForm):
       ('research', 'Important research'), 
       ('art', 'Iconic art work'),
       ('other', 'Something else')
-    ])
+    ], validators=[DataRequired()])
     short_term_goal = TextAreaField('4 Week Plan', validators=[DataRequired()])
     category_primary   = StringField('Main Category', validators=[DataRequired()])
-    category_secondary = StringField('Secondary Category', validators=[DataRequired()])
-    category_tertiary  = StringField('Tertiary Catgeory', validators=[DataRequired()])
+    category_secondary = StringField('Secondary Category')
+    category_tertiary  = StringField('Tertiary Catgeory')
     submit = SubmitField('Submit')
 
 class CommentForm(FlaskForm):

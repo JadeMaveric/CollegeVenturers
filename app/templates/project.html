@@ -1,43 +1,42 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container" id="project">
-    <div id="project_profile">
-        <!--project.id-->
-        <!--project.name-->
-        <!--project.rank()-->
-        <!--project.summary-->
-        <!--project.description-->
-        <!--project.future_scope-->
-        <!--project.short_term_goal-->
-        <!--project.category_primary-->
-        <!--project.category_secondary-->
-        <!--project.category_tertiary-->
-        <h3>{{project.name}}</h3>
-        <div class="row">
-            <div class="col-md-9">
-                <p><span class="tag span">{{project.category_primary}}</span> Other tags: <span class="tag">{{project.category_secondary}}</span>, <span class="tag">{{project.category_tertiary}}</span></p>
-                <h5>Summary</h5> 
-                <p>{{project.summary}}</p>
-
-                <h5>Description</h5>
-                {{project.description}}
-            </div>
-            <div class="col-md-1">
-
-            </div>
-            <div class="col-md-2">
-                <p class="rank">Ranked #{{project.rank}}</p>
-                <p>Check the project: {{project.website}}</p>
-                <p>This project could be {{project.future_scope}} someday.</p>
-            </div>
-        </div>
-        
-        
-        
+  <div id="project_profile">
+    <!--project.id-->
+    <!--project.name-->
+    <!--project.rank()-->
+    <!--project.summary-->
+    <!--project.description-->
+    <!--project.future_scope-->
+    <!--project.short_term_goal-->
+    <!--project.category_primary-->
+    <!--project.category_secondary-->
+    <!--project.category_tertiary-->
+    <h3>{{ project.name }}</h3>
+    <div class="row">
+      <div class="col-md-9">
+        <p>
+          <span class="tag span">{{ project.category_primary }}</span> Other
+          tags: <span class="tag">{{ project.category_secondary }}</span
+          >, <span class="tag">{{ project.category_tertiary }}</span>
+        </p>
+        <h5>Summary</h5>
+        <p>{{ project.summary }}</p>
+        <h5>Description</h5>
+        {{ project.description }}
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-2">
+        <p class="rank">Ranked #{{ project.rank }}</p>
+        <p>Check the project: {{ project.website }}</p>
+        <p>This project could be {{ project.future_scope }} someday.</p>
+      </div>
     </div>
-    <div id="comments">
-        <!--comments go here: to be implemented-->
-    </div>
+  </div>
+  <div id="comments">
+    <!--comments go here: to be implemented-->
+  </div>
+</div>
+<div id="comments">
+  {%include '_comment.html'%}
 </div>
 {% endblock %}

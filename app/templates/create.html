@@ -1,0 +1,169 @@
+{% extends "base.html" %} {% block content %}
+<div class="container" id="create">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center pt-3">Create a project</h2>
+      <div class="row"></div>
+      <form action="" method="post" novalidate id="create-form">
+        {{ form.hidden_tag() }}
+        <!-- Name row -->
+        <div class="row">
+          <!-- Firstname -->
+          <div class="col-md-6">
+            {{ form.firstname(size=32, placeholder=" Firstname", class="create-input")
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.firstname.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Lastname -->
+          <div class="col-md-6">
+            {{ form.lastname(size=32, placeholder=" Lastname", class="create-input")
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.lastname.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Email & Username Row-->
+        <div class="row">
+          <!-- Username -->
+          <div class="col-md-6">
+            {{ form.username(size=32, placeholder=" Username",class="create-input")
+            }}
+            {% for error in form.username.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Email -->
+          <div class="col-md-6">
+            {{ form.email(size=32, placeholder=" Email",class="create-input")
+            }}
+            {% for error in form.email.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Password Row -->
+        <div class="row">
+          <!-- Password -->
+          <div class="col-md-6">
+            {{ form.password(size=32, placeholder=" Password", class="create-input")
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.password.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Password 2 -->
+          <div class="col-md-6">
+            {{ form.password2(size=32, placeholder=" Confirm Password", class="create-input")
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.password2.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- College & About Me Row -->
+        <div class="row">
+          <!-- College -->
+          <div class="col-md-6">
+            {{ form.college(size=32, placeholder=" College", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.college.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- About Me -->
+          <div class="col-md-6">
+            {{ form.aboutme(size=32, placeholder=" About Me", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.aboutme.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Website & LinkedIn Row -->
+        <div class="row">
+          <!-- College -->
+          <div class="col-md-6">
+            {{ form.website(size=32, placeholder=" Website", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.website.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- LinkedIn -->
+          <div class="col-md-6">
+            {{ form.linkedin(size=32, placeholder=" LinkedIn", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.linkedin.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- GitHub & Twitter Row -->
+        <div class="row">
+          <!-- GitHub -->
+          <div class="col-md-6">
+            {{ form.github(size=32, placeholder=" GitHub", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.github.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+          <!-- Twitter -->
+          <div class="col-md-6">
+            {{ form.twitter(size=32, placeholder=" Twitter", class="create-input")
+
+
+
+            }}<br />
+            <!--error messages-->
+            {% for error in form.twitter.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- Button -->
+        <div class="row justify-content-around">
+          <span>{{ form.submit(id="create-submit") }}</span>
+        </div>
+      </form>
+      <hr />
+      <div class="row justify-content-around" class="no-auth">
+        <p style="display: inline">Already have an account yet?</p>
+        <a href="/login">Log in</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
