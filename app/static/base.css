@@ -134,7 +134,8 @@ footer ul li {
 
 #login-form #login-submit,
 #register-form #register-submit,
-#create-form #create-submit {
+#create-form #create-submit,
+#submit_comment .comment-submit {
   outline: none;
   border: #212121 solid 4px;
   border-radius: 10px;
@@ -145,7 +146,8 @@ footer ul li {
 /* Not working */
 #login-form .login-input,
 #register-form .register-input,
-#create-form .create-input {
+#create-form .create-input,
+#submit_comment .comment-input {
   padding-left: 10px;
   outline: none;
   border: none;
