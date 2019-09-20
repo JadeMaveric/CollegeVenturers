@@ -19,6 +19,11 @@ project_upvoters = db.Table('project_upvoters', db.Model.metadata,
     db.Column('upvoters', db.Integer, db.ForeignKey('user.id'))
 )
 
+project_comment = db.Table('project_comments', db.Model.metadata,
+    db.Column('project', db.Integer, db.ForeignKey('project.id')),
+    db.Column('comment', db.Integer, db.ForeignKey('comment.id'))
+)
+
 class User(UserMixin, db.Model):
     __tablename__ = 'user'
     # Login details
@@ -65,6 +70,7 @@ class Project(db.Model):
     category_primary = db.Column(db.String(32))
     category_secondary = db.Column(db.String(32))
     category_tertiary = db.Column(db.String(32))
+    comments = db.relationship('Comment', secondary=project_comment, backref='project')
 
     #rank = %COUNT(upvotes) WHERE PROJECT = self.id
     def rank(self):
@@ -87,7 +93,7 @@ class Comment(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return f'<Project {self.author} - {self.timestamp}>'
+        return f'<Comment {self.author} - {self.timestamp}>'
 
 @login.user_loader
 def load_user(id):
