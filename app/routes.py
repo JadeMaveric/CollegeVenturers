@@ -1,8 +1,8 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_login import current_user, login_user, logout_user#, login_required
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, CommentForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, CommentForm, ProjectForm
+from app.models import User, Project, Comment
 from werkzeug.urls import url_parse
 
 @app.route('/')
@@ -74,7 +74,29 @@ def welcome():
 
 from datetime import datetime
 
-@app.route('/project/create')
+@app.route('/create_project', methods=['GET', 'POST'])
+def create_project():
+    form = ProjectForm()
+    if form.validate_on_submit():
+        new_project = Project(
+            name = form.name.data,
+            summary = form.summary.data,
+            website = form.website.data,
+            description = form.description.data,
+            future_scope = form.future_scope.data,
+            short_term_goal = form.short_term_goal.data,
+            category_primary = form.category_primary.data,
+            category_secondary = form.category_secondary.data,
+            category_tertiary = form.category_tertiary.data
+        )
+        usernames = tuple([name.strip() for name in form.members.data.split(',')])
+        usernames = User.query.filter(User.username.in_(usernames)).all()
+        new_project.contributors.append(usernames)
+        db.session.add(new_project)
+        db.session.commit()
+        flash("Successfully created a project")
+        return redirect( url_for(project, new_project.id) )
+    return render_template('create_project.html', title='Create Project', form=form)
 
 @app.route('/project/<project_id>')
 def project(project_id):

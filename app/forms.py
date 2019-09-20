@@ -40,13 +40,15 @@ class ProjectForm(FlaskForm):
     name = StringField('Project Name', validators=[DataRequired()])
     summary = StringField('Short Summary', validators=[DataRequired()])
     description = TextAreaField('Description', validators=[DataRequired()])
+    website = StringField('Project Website')
+    members = StringField('List of members usernames', validators=[DataRequired()])
     future_scope = SelectField('Future Scope', choices = [
       ('company', 'A company'), 
       ('ngo', 'A non-profit'),
       ('research', 'Important research'), 
       ('art', 'Iconic art work'),
       ('other', 'Something else')
-    ], validators=[DataRequired()])
+    ])
     short_term_goal = TextAreaField('4 Week Plan', validators=[DataRequired()])
     category_primary   = StringField('Main Category', validators=[DataRequired()])
     category_secondary = StringField('Secondary Category')

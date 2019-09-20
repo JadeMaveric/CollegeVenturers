@@ -23,7 +23,7 @@
 
             }}<br />
             <!--error messages-->
-            {% for error in form.lastname.errors %}
+            {% for error in form.summary.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
@@ -87,68 +87,6 @@
             }}<br />
             <!--error messages-->
             {% for error in form.category_secondary.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-          </div>
-        </div>
-        <!-- Website & LinkedIn Row -->
-        <div class="row">
-          <!-- College -->
-          <div class="col-md-6">
-            {{ form.category_tertiary(size=32, placeholder=" Tertiary Category", class="create-input")
-
-            }}<br />
-            <!--error messages-->
-            {% for error in form.category_tertiary.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-          </div>
-          <!-- LinkedIn -->
-          <div class="col-md-6">
-            {{ form.linkedin(size=32, placeholder=" LinkedIn", class="create-input")
-
-            }}<br />
-            <!--error messages-->
-            {% for error in form.linkedin.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-          </div>
-        </div>
-        <!-- GitHub & Twitter Row -->
-        <div class="row">
-          <!-- GitHub -->
-          <div class="col-md-6">
-            {{ form.github(size=32, placeholder=" GitHub", class="create-input")
-
-
-
-
-
-
-
-
-
-            }}<br />
-            <!--error messages-->
-            {% for error in form.github.errors %}
-            <span class="error">[{{ error }}]</span>
-            {% endfor %}
-          </div>
-          <!-- Twitter -->
-          <div class="col-md-6">
-            {{ form.twitter(size=32, placeholder=" Twitter", class="create-input")
-
-
-
-
-
-
-
-
-
-            }}<br />
-            <!--error messages-->
-            {% for error in form.twitter.errors %}
             <span class="error">[{{ error }}]</span>
             {% endfor %}
           </div>
