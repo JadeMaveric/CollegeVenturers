@@ -48,7 +48,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        <a class="nav-item nav-link" href="{{ url_for('leaderboard') }}">Projects</a>
         {% if current_user.is_anonymous %}
         <a class="nav-item nav-link" href="{{ url_for('login') }}">Log in</a>
         {% else %}
