@@ -5,7 +5,7 @@ bcrypt==3.1.7
 blinker==1.4
 cffi==1.12.3
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 dominate==2.4.0
 elasticsearch==7.0.4
 Flask==1.1.1
